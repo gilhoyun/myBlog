@@ -119,3 +119,11 @@ main{
     font-weight: bold;
 }
 
+
+iframe{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
