@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="float_right"><a href="signin.html">Sign in</a></li>
+                <li class="float_right"><a href="signup.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login_section">
+            <h2>로그인</h2>
+            <input type="text" placeholder="아이디를 입력해주세요" ><br>
+            <input type="password" placeholder="비밀번호를 입력해주세요"><br>
+            <button type = "button"  id="login-btn">로그인</button>
+            <div class="social_area">  
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </section>
+    </main>
+    <footer>
+      2023 My Blog. All rights reserved    
+    </footer>
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>정말 로그인하시겠습니까?</p>
+            <button type="button" id="next">진행</button>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("mymodal");
+
+        var btn = document.getElementById("login-btn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        var next = document.getElementById("next");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        next.addEventListener('click,', function () {
+            alert("아이디 또는 비밀번호를 확인해주세요.")
+            modal.style.display = 'none'
+        })
+
+
+    </script>
+</body>
+</html>
